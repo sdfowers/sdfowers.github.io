@@ -135,3 +135,8 @@ a {
     text-decoration: none;
     color: white;
 }
+.badge-container {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
