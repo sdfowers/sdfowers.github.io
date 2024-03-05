@@ -10,6 +10,90 @@
         <title>Sean Fowers Portfolio</title>
     </head>
     <body>
+        <!------------- HEADER ------------>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <div class="title">S<b>D</b>F</div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Web and App Developer</p>
+                    <h1>Hi, I'm <b>Sean Fowers</b> <br> from Australia</h1>
+                </div>
+            </div>
+        </div>
+        <!------------- ABOUT ------------>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./images/sean.jpg" alt="A picture of me">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Passionate web developer with expertise in Python, 
+                            C#, HTML/CSS, PHP, Swift, JavaScript & TypeScript, MySQL, 
+                            SQLite, and MongoDB. Background in graphic design, video editing, 
+                            and 3D modelling. Completed a bachelor’s degree in information technology 
+                            with a major in Software Development. Proven track record of academic excellence, 
+                            with a GPA of 6.0 (scale 1-7). Experience in full-stack development, 
+                            including front-end design with React Native, Angular, Laravel, 
+                            and backend development with Node.js. Excellent communication skills 
+                            and a strong ability to work in a team.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Android/IOS applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>TAFE QLD<br>2018</span><br>Diploma of Screen and Media</li>
+                                <li><span>Griffith University<br>2019 - 2023</span><br>Bachelors Degree in Information Technology
+                                    <br>Majoring in Software Development</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>BlueCare<br>2014 - 2017</span><br>Hospitality Officer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
+
+<!--
         <nav class="navbar">
             <ul class="nav-list">
                 <h3 class="nav-title">Sean Fowers</h3>
@@ -57,5 +141,4 @@
                 </ul>
             </div>
         </div>
-    </body>
-</html>
+        -->
