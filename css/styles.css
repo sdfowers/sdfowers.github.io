@@ -140,3 +140,7 @@ a {
     display: flex;
     justify-content: center;
 }
+.badge {
+    color: white;
+    background-color: white;
+}
