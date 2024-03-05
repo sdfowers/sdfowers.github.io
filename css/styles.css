@@ -140,8 +140,5 @@ a {
     background-color: white;
     display: flex;
     justify-content: center;
-}
-.badge {
-    color: white;
-    background-color: white;
+    width: 1350px;
 }
