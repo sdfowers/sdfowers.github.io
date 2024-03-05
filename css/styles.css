@@ -139,4 +139,6 @@ a {
     color: white;
     display: flex;
     justify-content: center;
+    background-color: white;
+    width: 750px;
 }
