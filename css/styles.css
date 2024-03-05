@@ -138,12 +138,11 @@ a {
 .badge-container {
     display: flex;
     justify-content: center;
-    height: 450px;
 }
 .badges {
     display: flex;
     justify-content: center;
     background-color: white;
     width: 750px;
-    height: 450px;
+    height: 225px;
 }
