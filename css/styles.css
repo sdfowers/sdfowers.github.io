@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: rgba(12,15,19,1);
     color: #fff;
@@ -263,9 +266,11 @@ nav ul li a:hover::after {
 }
 
 /* ######### CONTACT ########## */
+/*
 #contact {
     
 }
+*/
 .contact-left {
     flex-basis: 35%;    
 }
@@ -371,6 +376,28 @@ nav .fa-solid {
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+    .sub-title {
+        font-size: 40px;
+    }
+    .about-col-1 {
+        margin-bottom: 15px
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-2 {
+        font-size: 14px;
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .copyright {
+        font-size: 14px;
     }
 }
 
