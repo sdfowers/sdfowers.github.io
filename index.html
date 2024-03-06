@@ -138,6 +138,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="badge-container">
+                    <div class="badges">
+                        <div data-iframe-width="100" data-iframe-height="180" data-share-badge-id="3a32864f-47bc-492e-b6e1-12c298ed69cb" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        <div data-iframe-width="100" data-iframe-height="180" data-share-badge-id="2c16dc35-7a26-4617-8118-e2c10c50df89" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        <div data-iframe-width="100" data-iframe-height="180" data-share-badge-id="33166503-10d1-44a4-80a8-9b387ae9f31a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    </div>
+                </div>
                 <a href="#" class="btn">See More</a>
             </div>
         </div>
@@ -160,12 +167,13 @@
                         <a href="./pdf/Sean_Fowers_Resume_5-03-24.pdf" download class="btn btn2">Download Resume</a>
                     </div>
                     <div class="contact-right">
-                        <form action="">
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2"><i class="fa-solid fa-paper-plane"></i> Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -196,55 +204,24 @@
                 sidemenu.style.right = "-200px";
             }
         </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxcK9GaA90cOOtXQI1z71PjbM4oAM-iayZenS-4je3R6240vvxKJeHBtFJ4JuxiFoAJ/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById('msg');
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response);
+                    msg.innerHTML = "Message Sent Successfully";
+                    setTimeout(function() {
+                        msg.innerHTML = "";
+                    }, 5000)
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </body>
 </html>
-
-<!--
-        <nav class="navbar">
-            <ul class="nav-list">
-                <h3 class="nav-title">Sean Fowers</h3>
-                <li class="current-nav-item"><a href="./index.html">About Me</a></li>
-                <li class="nav-item"><a href="./resume.html">Resume</a></li>
-                <h3 class="nav-title">Portfolio</h3>
-                <li class="nav-item"><a href="./webandapps.html">Websites & Apps</a></li>
-                <li class="nav-item">
-                    <a href="www.linkedin.com/in/sean-d-fowers">
-                        <i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/sfowers">
-                        <i class="fa-brands fa-github fa-2xl" style="color: #ffffff;"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="content-container">
-            <div class="title-container">
-                <h4>Hello i'm</h4>
-                <h2>SEAN FOWERS</h2>
-                <p>
-                    Passionate web developer with expertise in Python, 
-                    C#, HTML/CSS, PHP, Swift, JavaScript & TypeScript, MySQL, 
-                    SQLite, and MongoDB. Background in graphic design, video editing, 
-                    and 3D modelling. Completed a bachelor’s degree in information technology 
-                    with a major in Software Development. Proven track record of academic excellence, 
-                    with a GPA of 6.0 (scale 1-7). Experience in full-stack development, 
-                    including front-end design with React Native, Angular, Laravel, 
-                    and backend development with Node.js. Excellent communication skills 
-                    and a strong ability to work in a team.
-                </p>
-                <br>
-                <h3>PERSONAL ATTRIBUTES AND SKILLS</h3>
-                <ul>
-                    <li>Programming Expertise in Multiple Languages, such as Python, C, C#, PHP, JavaScript, 
-                        Typescript, Swift as evidenced by my academic studies & consistently high GPA.</li>
-                    <li>Frontend Experience with HTML/CSS & Libraries such as Laravel, React Native, Angular, 
-                        & Bootstrap due to my experience with elective web development classes at university.</li>
-                    <li>Highly Effective Communication Skills because of my University group roles & my 
-                        experience as a Hospitality Officer at a nursing home.</li>
-                    <li>Confident in my research and analytical skills due to my academic studies.</li>
-                </ul>
-            </div>
-        </div>
-        -->
