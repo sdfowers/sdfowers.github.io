@@ -15,6 +15,9 @@ body {
     background-size: cover;
     background-position: center;
 }
+.container {
+    padding: 10px 10%;
+}
 
 /* ###### NAVBAR ###### */
 nav {
@@ -62,8 +65,6 @@ nav ul li a:hover::after {
 /* ###### HEADER ###### */
 .header-text {
     margin-top: 20%;
-    margin-left: 10%;
-    margin-right: 10%;
     font-size: 30px;
 }
 .header-text h1 {
@@ -74,8 +75,6 @@ nav ul li a:hover::after {
 /* ######### ABOUT ########## */
 #about {
     padding: 80px 0;
-    margin-left: 10%;
-    margin-right: 10%;
     color: #ababab;
 }
 .row {
@@ -146,8 +145,6 @@ nav ul li a:hover::after {
 /* ######## SERVICES ######### */
 #services {
     padding: 30px 0;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 .services-list {
     display: grid;
@@ -187,8 +184,6 @@ nav ul li a:hover::after {
 /* ########### PORTFOLIO ########### */
 #portfolio {
     padding: 50px 0;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 .portfolio-items {
     display: grid;
@@ -269,8 +264,7 @@ nav ul li a:hover::after {
 
 /* ######### CONTACT ########## */
 #contact {
-    margin-left: 10%;
-    margin-right: 10%;
+    
 }
 .contact-left {
     flex-basis: 35%;    
@@ -338,8 +332,46 @@ form .btn2 {
 }
 
 /* ############## CSS FOR SMALL SCREEN ################# */
+nav .fa-solid {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    
+    #header {
+        background-image: url(../images/pexels-neo-2653362-phone.jpg);
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #2b9fec;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
 
 
