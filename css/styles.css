@@ -1,3 +1,12 @@
+:root {
+    --text: #ffffff;
+    --background: #0e121a;
+    --primary: #09a0dc;
+    --secondary: #1b3448;
+    --accent: #ed6110;
+    --linearPrimarySecondary: linear-gradient(#09a0dc, #1b3448);
+    --linearPrimaryAccent: linear-gradient(#09a0dc, #ed6110);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +17,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: rgba(12,15,19,1);
-    color: #fff;
+    background: #0e121a;
+    color: var(--text);
 }
 #header {
     width: 100%;
@@ -30,7 +39,7 @@ nav {
     flex-wrap: wrap;
 }
 .title {
-    color: #fff;
+    color: var(--text);
     font-size: 50px;
     font-weight: 800;
     display: flex;
@@ -38,7 +47,7 @@ nav {
     flex-wrap: nowrap;
 }
 b {
-    color: #2b9fec;
+    color: var(--primary);
 }
 nav ul li {
     display: inline-block;
@@ -47,7 +56,7 @@ nav ul li {
 
 }
 nav ul li a{
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -56,7 +65,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #2b9fec;
+    background: var(--primary);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -104,7 +113,7 @@ nav ul li a:hover::after {
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #ffff;
 }
 .tab-titles {
     display: flex;
@@ -121,7 +130,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #2b9fec;
+    background: var(--primary);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -135,7 +144,7 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 .tab-contents ul li span {
-    color: #3e87b8;
+    color: var(--primary);
     font-size: 14px;
 }
 .tab-contents {
@@ -174,13 +183,13 @@ nav ul li a:hover::after {
 }
 .services-list div a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text);
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 .services-list div:hover {
-    background: #277eb8;
+    background: var(--primary);
     transform: translateY(-10px);
 }
 
@@ -210,7 +219,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #277eb8);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--primary));
     border-radius: 10px;
     position:absolute;
     left: 0;
@@ -231,11 +240,11 @@ nav ul li a:hover::after {
 }
 .layer a {
     margin-top: 20px;
-    color: #277eb8;
+    color: var(--primary);
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: var(--text);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -254,15 +263,15 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #277eb8;
+    border: 1px solid var(--primary);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: var(--text);
     transition: background 0.5s;
 }
 .btn:hover {
-    background: #277eb8;
+    background: #1b3448;
 }
 .badge-container {
     display: flex;
@@ -293,7 +302,7 @@ nav ul li a:hover::after {
     margin-top: 30px;
 }
 .contact-left p i {
-    color: #277eb8;
+    color: var(--primary);
     margin-right: 15px;
     font-size: 25px;
 }
@@ -309,12 +318,16 @@ nav ul li a:hover::after {
     transition: transform 0.5s;
 }
 .social-icons a:hover {
-    color: #2b9fec;
+    color: #1b3448;
     transform: translateY(-5px);
 }
 .btn.btn2 {
     display: inline-block;
-    background: #2b9fec;
+    background: var(--primary);
+    transition: 0.2s;
+}
+.btn.btn2:hover {
+    background: #1b3448;
 }
 .contact-right form {
     width: 100%;
@@ -326,7 +339,7 @@ form input, form textarea {
     background: #636363;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: var(--text);
     font-size: 18px;
     border-radius: 6px;
 }
@@ -345,7 +358,7 @@ form .btn2 {
     padding: 10px;
 }
 .copyright i {
-    color: #2b9fec;
+    color: var(--primary);
 }
 #msg {
     color: #61b752;
