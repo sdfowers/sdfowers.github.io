@@ -152,6 +152,7 @@ nav ul li a:hover::after {
 }
 .tab-contents.active-tab {
     display: block;
+    transition: 0.3s;
 }
 
 /* ######## SERVICES ######### */
@@ -275,15 +276,21 @@ nav ul li a:hover::after {
 }
 .badge-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 60px;
+    max-width: 150px;
+    margin-top: -180px;
+    margin-left: 360px;
 }
 .badges {
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    width: 450px;
-    height: 225px;
+    
+}
+.badges img {
+    margin-top: -45px;
+    width: 112px;
+    height: 112px;
 }
 
 /* ######### CONTACT ########## */
