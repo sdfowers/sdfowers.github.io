@@ -279,13 +279,9 @@ nav ul li a:hover::after {
     justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 60px;
     max-width: 150px;
-    margin-top: -180px;
+    margin-top: -135px;
     margin-left: 360px;
-}
-.badges {
-    
 }
 .badges img {
     margin-top: -45px;
@@ -349,6 +345,10 @@ form input, form textarea {
     color: var(--text);
     font-size: 18px;
     border-radius: 6px;
+    border: 2px transparent solid;
+}
+input:focus, textarea:focus {
+    border: 2px var(--primary) solid;
 }
 form .btn2 {
     padding: 14px 60px;
@@ -378,7 +378,7 @@ nav .fa-solid {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     #header {
         background-image: url(../images/pexels-neo-2653362-phone.jpg);
     }
@@ -388,6 +388,17 @@ nav .fa-solid {
     }
     .header-text h1 {
         font-size: 30px;
+    }
+    .badge-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .badges img{
+        margin-top: 0px;
     }
     nav .fa-solid {
         display: block;
